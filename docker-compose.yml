@@ -4,13 +4,5 @@ services:
   app:
     image: ghcr.io/ghettoddos/telegram-gpt:latest
     restart: always
-    environment:
-      OPENAI_API_KEY: '${OPENAI_API_KEY}'
-      OPENAI_MODEL: '${OPENAI_MODEL}'
-      OPENAI_TEMPERATURE: '${OPENAI_TEMPERATURE}'
-      OPENAI_TOP_P: '${OPENAI_TOP_P}'
-      OPENAI_PRESENCE_PENALTY: '${OPENAI_PRESENCE_PENALTY}'
-      OPENAI_FREQUENCY_PENALTY: '${OPENAI_FREQUENCY_PENALTY}'
-      TELEGRAM_BOT_TOKEN: '${TELEGRAM_BOT_TOKEN}'
     env_file:
-      - stack.env
+      - ../stack.env
