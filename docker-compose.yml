@@ -2,5 +2,7 @@ version: '3.7'
 
 services:
   app:
-    image: ${DOCKER_IMAGE}
+    image: ghcr.io/ghettoddos/telegram-gpt:latest
     restart: always
+    env_file:
+      - stack.env
