@@ -5,4 +5,4 @@ services:
     image: ghcr.io/ghettoddos/telegram-gpt:latest
     restart: always
     env_file:
-      - ../stack.env
+      - stack.env
