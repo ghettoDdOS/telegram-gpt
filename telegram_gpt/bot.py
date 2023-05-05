@@ -55,8 +55,7 @@ async def ask_chat_gpt(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> None:
     if bot.username not in update.message.text:
         return
 
-    user_message = update.message.text.lstrip(bot.username)
-
+    user_message = update.message.text.lstrip(f"@{bot.username}").strip()
     chat_gpt_response = send_chat_gpt_message(user_message)
     chat_gpt_answer = chat_gpt_response.choices[0].message.content
 
